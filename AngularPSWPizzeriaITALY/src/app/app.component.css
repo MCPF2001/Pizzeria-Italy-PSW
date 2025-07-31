@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Afacad Flux', Arial, sans-serif;
+}
+
+/* Navbar come colonna rotonda a destra */
+.navbar {
+  position: fixed; /* Fissa la barra sul lato destro */
+  top: 0;
+  right: 0; /* Posiziona la barra sul lato destro */
+  width: 200px; /* Larghezza della colonna */
+  height: 100vh; /* Altezza completa della finestra */
+  background-color: #ff0000; /* Rosso */
+  border-radius: 40px 0 0 40px; /* Arrotonda i bordi sinistri */
+  display: flex;
+  flex-direction: column; /* Elementi disposti in colonna */
+  align-items: center; /* Centra gli elementi orizzontalmente */
+  justify-content: space-between; /* Spazia gli elementi verticalmente */
+  padding: 20px 0; /* Padding interno */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Ombra */
+  z-index: 1000; /* Porta la barra in primo piano */
+}
+
+/* Logo o titolo nella parte superiore della navbar */
+.logo {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+/* Pulsanti nella navbar */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Allinea i link verticalmente */
+  gap: 15px; /* Spaziatura tra i link */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  transition: transform 0.3s;
+}
+
+.nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%; /* Pulsanti rotondi */
+  background-color: rgba(255, 255, 255, 0.2); /* Sfondo semi-trasparente */
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: white;
+  color: #ff0000;
+}
+
+/* Pulsante Logout verde */
+.logout-button {
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Forma rotonda */
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; /* Assicura che sia visibile */
+  margin-bottom: 20px; /* Spaziatura dal bordo inferiore */
+}
+
+.logout-button:hover {
+  background-color: #218838; /* Verde scuro */
+}
+
+/* Contenuto principale */
+.product-container {
+  margin-left: 100px; /* Lascia spazio alla barra laterale */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}

@@ -1,0 +1,29 @@
+package com.progettopswcp.ProgettoPSW.entities;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "prodotti_ordinati")
+public class prodottiordinati {
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "id_prodotto", nullable = false)
+    private Integer idProdotto;
+
+    @Column(name = "id_ordine", nullable = false)
+    private Integer idOrdine;
+
+    @Column(name = "id_utente", nullable = false)
+    private Integer idUtente;
+
+    @Column(name = "quantita", nullable = false)
+    private Integer quantita;
+
+}

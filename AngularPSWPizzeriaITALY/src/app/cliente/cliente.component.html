@@ -1,0 +1,41 @@
+<div class="cliente-container" *ngIf="cliente">
+  <h1>Profilo Utente</h1>
+
+  <div class="user-info">
+    <p><strong>Nome:</strong> {{ cliente.nome }}</p>
+    <p><strong>Cognome:</strong> {{ cliente.cognome }}</p>
+    <p><strong>Email:</strong> {{ cliente.email }}</p>
+  </div>
+
+  <h2>Modifica Profilo</h2>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <!-- Numero di Telefono -->
+    <div class="form-group">
+      <label for="telefono">Numero di Telefono:</label>
+      <input
+        type="text"
+        id="telefono"
+        formControlName="telefono"
+        placeholder="Inserisci il tuo numero di telefono" />
+      <div class="error" *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.untouched)">
+        <small *ngIf="telefono?.errors?.['pattern']">Numero di telefono non valido.</small>
+      </div>
+    </div>
+
+
+
+
+
+    <button type="submit" [disabled]="profileForm.invalid">Aggiorna</button>
+  </form>
+
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>
+<div *ngIf="!cliente && errorMessage" class="error-message">
+  <p>{{ errorMessage }}</p>
+</div>

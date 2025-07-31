@@ -1,0 +1,31 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.ordine-card {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
