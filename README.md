@@ -41,7 +41,7 @@ Il database è gestito con PostgreSQL. Utilizza tabelle per utenti, prodotti e o
 ### Passaggi
 1. Clona il repository:
    ```bash
-   git clone https://github.com/tuo-username/pizzeria-italy-psw.git
+   git clone https://github.com/MCPF2001/pizzeria-italy-psw.git
 Configura il database PostgreSQL:
 
 Crea un database chiamato pizzeria_db.
